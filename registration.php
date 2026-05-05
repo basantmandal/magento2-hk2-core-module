@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * HK2_Core - Module registration file
+ *
+ * PHP version 8+
+ *
+ * DISCLAIMER
+ * Do not edit or add to this file if you wish to upgrade this extension in the future.
+ *
+ * @category  Module
+ * @package   HK2_Core
+ * @author    Basant Mandal <support@basantmandal.in>
+ * @copyright 2026 Basant Mandal HK2 - Hash Tag Kitto (https://www.basantmandal.in)
+ * @license   OSL-3.0 <https://www.basantmandal.in/LICENSE.txt>
+ * @link      https://www.basantmandal.in/
+ */
+
+use Magento\Framework\Component\ComponentRegistrar;
+
+ComponentRegistrar::register(
+    ComponentRegistrar::MODULE,
+    'HK2_Core',
+    __DIR__
+);
