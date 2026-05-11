@@ -1,38 +1,64 @@
 # Compatibility Guide
 
-The HK2 Core Module is designed to work with:
-
-- **Magento Open Source:** 2.4.x
-- **Adobe Commerce:** 2.4.x
-- **PHP:** 8.1, 8.2
-
 ## Magento Versions
 
-| Magento Version | Status |
-| :--- | :--- |
-| 2.4.0 - 2.4.3 | ⚠️ Limited testing |
-| 2.4.4 - 2.4.6 | ✅ Fully supported |
-| 2.4.7+ | ✅ Compatible |
+HK2_Core is compatible with Magento **2.4.x** across all editions:
+
+| Magento Edition | Compatibility |
+|---|---|
+| Magento Open Source 2.4.x | ✅ |
+| Adobe Commerce (formerly Magento Commerce) 2.4.x | ✅ |
+| Adobe Commerce Cloud 2.4.x | ✅ |
+
+The module requires `magento/framework` **^103.0.0**, which corresponds to the Magento 2.4.x release line.
+
+### Module sequence
+
+The module loads after the following Magento modules (defined in `etc/module.xml`):
+
+- `Magento_Backend`
+- `Magento_Config`
+- `Magento_Store`
+
+These dependencies ensure that the admin configuration tab, menu item, and ACL resource are registered during the correct load phase.
 
 ## PHP Versions
 
-| PHP Version | Status |
-| :--- | :--- |
-| 8.1 | ✅ Supported |
-| 8.2 | ✅ Supported |
-| 8.3 | ⚠️ Untested |
+| PHP Version | Compatibility |
+|---|---|
+| 8.1 | ✅ Fully supported |
+| 8.2 | ✅ Fully supported |
+| 8.3 | ✅ Fully supported |
+| 8.4 | ✅ Fully supported |
 
-## Third-Party Extensions
+The `composer.json` requires `^8.1 || ^8.2 || ^8.3 || ^8.4`, and the PHPCS configuration targets `testVersion="8.2-"` to ensure forward compatibility.
 
-The module is designed to be compatible with most third-party Magento 2 extensions. If you encounter compatibility issues with specific modules or themes, please open an issue on GitHub.
+## Dependency Compatibility Matrix
 
----
+| Dependency | Required Version | Notes |
+|---|---|---|
+| `magento/framework` | `^103.0.0` | Core Magento framework; ships with Magento 2.4.x |
+| `php` | `^8.1 \|\| ^8.2 \|\| ^8.3 \|\| ^8.4` | All supported PHP 8.x lines |
 
-<div align="center">
-  <b>Basant Mandal</b><br>
-  <a href="https://www.basantmandal.in/"><img src="https://img.shields.io/badge/Website-000?style=flat-square&logo=ko-fi&logoColor=white" alt="Website"></a>
-  <a href="https://www.linkedin.com/in/basantmandal/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:support@basantmandal.in"><img src="https://img.shields.io/badge/Email-support%40basantmandal.in-blue?style=flat-square&logo=gmail" alt="Email"></a>
-  
-  ---
-</div>
+No other third-party Composer dependencies are required. The module has zero runtime dependencies beyond the Magento framework itself.
+
+## Browser Requirements
+
+This module is admin-only and has no browser requirements. It renders no frontend assets — all functionality is server-side XML configuration and PHP block classes.
+
+## Sibling Module Compatibility
+
+The following HK2 modules depend on HK2_Core and are fully compatible:
+
+| Module | Composer Package | Sequences On |
+|---|---|---|
+| HK2_AddBootstrap5 | `hk2/bootstrap5` | `HK2_Core` |
+| HK2_CspWhitelisting | `hk2/csp-whitelisting` | `HK2_Core` |
+| HK2_SanitizeSearch | `hk2/search-sanitizer` | `HK2_Core` |
+| HK2_ScrollTop | `hk2/scrolltop` | `HK2_Core` |
+
+## Upgrade Compatibility
+
+- **No breaking schema changes** — The module defines no database tables, columns, or EAV attributes. Upgrades between versions are purely XML configuration changes.
+- **No setup patches** — The module has no `Setup` directory or patch classes. Version bumps are informational only.
+- **Backward compatible** — The public API consists of the `ModuleHeader` block class, the `hk2_options_tab` tab ID, the `HK2::root` menu ID, and the `HK2_Core::root` ACL resource ID. These identifiers will not change without a major version bump.
