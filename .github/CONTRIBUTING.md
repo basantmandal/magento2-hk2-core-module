@@ -1,16 +1,11 @@
 <div align="center">
 
-# HK2 Core Module
+# Contributing to HK2 Core
 
-**The foundational base module for all Magento 2 HK2 extensions.**
+**First off, thank you for considering contributing to the HK2 Core Module! It's people like you that make it such a great tool.**
 
 <img src="https://img.shields.io/badge/version-1.0.0-blue?style=flat-square" alt="Version">
-<img src="https://img.shields.io/badge/Magento-2.4.x-orange?style=flat-square" alt="Magento">
-<img src="https://img.shields.io/badge/PHP-8.1%2B-8A2BE2?style=flat-square" alt="PHP">
 <img src="https://img.shields.io/badge/license-OSL--3.0-green?style=flat-square" alt="License">
-
-<br>
-
 <a href="https://www.basantmandal.in/"><img src="https://img.shields.io/badge/Website-000?style=flat-square&logo=ko-fi&logoColor=white" alt="Website"></a>
 <a href="https://www.linkedin.com/in/basantmandal/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 <a href="mailto:support@basantmandal.in"><img src="https://img.shields.io/badge/Email-support%40basantmandal.in-blue?style=flat-square&logo=gmail" alt="Email"></a>
@@ -21,17 +16,23 @@
 
 ## 👋 Introduction
 
-First off, thank you for considering contributing to the HK2 Core Module! It's people like you that make it such a great tool.
+Welcome to the **HK2 Core** contributing guide! This document provides guidelines and instructions for contributing to this Magento 2 extension.
+
+Whether you're fixing a bug, adding a feature, or improving documentation — your contributions are highly appreciated. All contributions help make this extension better for the entire Magento community.
 
 ---
 
 ## 🐛 Reporting Bugs
 
-Bugs are tracked as GitHub issues. Explain the problem and include additional details to help maintainers reproduce the problem:
+Before creating bug reports, please check existing issues to avoid duplicates.
 
-- Use a clear and descriptive title.
-- Describe the exact steps to reproduce the problem.
-- Provide specific examples to demonstrate the steps.
+**When creating a bug report, please include:**
+
+- **Clear title and description** of the issue
+- **Steps to reproduce** the behavior
+- **Expected behavior** vs **actual behavior**
+- **Environment details**: Magento version, PHP version, module version
+- **Screenshots or logs** if applicable
 
 > 💡 **Tip:** Use our [Bug Report Template](ISSUE_TEMPLATE/bug_report.yml) when creating an issue for a structured report.
 
@@ -39,22 +40,54 @@ Bugs are tracked as GitHub issues. Explain the problem and include additional de
 
 ## 💡 Suggesting Enhancements
 
-Enhancement suggestions are tracked as GitHub issues. When creating an enhancement request, please include:
+Enhancement suggestions are welcome! When suggesting a feature:
 
-- A clear and descriptive title.
-- A step-by-step description of the suggested enhancement.
-- Specific examples to demonstrate the steps.
+- **Use a clear and descriptive title**
+- **Provide a detailed description** of the proposed functionality
+- **Explain why this enhancement would be useful** to users
+- **Include examples or mockups** if possible
 
 ---
 
 ## 🛠️ Pull Requests
 
-1. Fork the repository and create your branch from `main`.
-2. If you've added code that should be tested, add tests.
-3. If you've changed APIs, update the documentation.
-4. Ensure the test suite passes.
-5. Make sure your code lints.
-6. Issue that pull request!
+### Process
+
+1. **Fork the repository** and create your branch from `main`
+2. **Make your changes** following the coding standards below
+3. **Test your changes** thoroughly in a Magento 2.4.x environment
+4. **Update documentation** if your changes affect functionality
+5. **Submit a Pull Request** with a clear description of changes
+
+### PR Requirements
+
+- [ ] Code follows Magento 2 coding standards (PSR-12)
+- [ ] Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/) specification
+- [ ] Changes are tested on Magento 2.4.x with PHP 8.2+
+- [ ] Documentation is updated if applicable
+- [ ] No breaking changes without major version bump
+
+### Commit Message Format
+
+We follow [Conventional Commits](https://www.conventionalcommits.org/):
+
+```text
+type(scope): description
+
+[optional body]
+
+[optional footer]
+```
+
+**Types:**
+
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, semicolons, etc.)
+- `refactor`: Code refactoring
+- `test`: Adding or updating tests
+- `chore`: Maintenance tasks
 
 ---
 
@@ -66,15 +99,27 @@ This project follows Magento 2 coding standards:
 - **Magento EQP:** MEQP2 coding standard
 - **Code sniffing:** Run `phpcs` before submitting PRs
 
----
-
-## PHPCS Configuration
+### PHPCS Configuration
 
 The project includes a `phpcs.xml` configuration file. Run:
 
 ```bash
 vendor/bin/phpcs --standard=phpcs.xml
 ```
+
+### Module Structure
+
+Follow Magento 2 module structure:
+
+```text
+app/code/HK2/Core/
+├── Block/
+├── etc/
+├── view/
+├── registration.php
+└── composer.json
+```
+
 ---
 
 ## 📚 Additional Resources
@@ -90,6 +135,6 @@ vendor/bin/phpcs --standard=phpcs.xml
   <a href="https://www.basantmandal.in/"><img src="https://img.shields.io/badge/Website-000?style=flat-square&logo=ko-fi&logoColor=white" alt="Website"></a>
   <a href="https://www.linkedin.com/in/basantmandal/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="mailto:support@basantmandal.in"><img src="https://img.shields.io/badge/Email-support%40basantmandal.in-blue?style=flat-square&logo=gmail" alt="Email"></a>
-  
+
   ---
 </div>

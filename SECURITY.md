@@ -2,61 +2,47 @@
 
 ## Supported Versions
 
-| Version | Status | Support Level |
-| :--- | :--- | :--- |
-| Latest stable | ✅ Supported | Active security updates & patches |
-| Previous major | ⚠️ Limited | Critical vulnerabilities only |
-| End-of-life (EOL) | ❌ Unsupported | No security updates |
+Only the latest release of HK2_Core receives security patches. Older versions are not maintained.
 
-> 🔒 **Best Practice:** Always keep your dependencies up to date and use the latest stable version of this project.
+| Version | Supported |
+|---|---|
+| 1.0.x (latest) | ✅ Supported |
+| < 1.0 | ❌ Not supported |
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability within this project, please send an e-mail to Basant Mandal at `support@basantmandal.in`. All security vulnerabilities will be promptly addressed.
+We take the security of our software seriously. If you discover a security vulnerability in HK2_Core, please report it privately before disclosing it publicly.
 
-Please include:
+**Do not** report security issues via public GitHub issues. Instead, send a detailed report to:
 
-- A description of the vulnerability
-- Steps to reproduce
-- Potential impact
+**Email:** support@basantmandal.in
 
-## What to Expect
+### What to include
 
-1. We will acknowledge receipt of your vulnerability report.
-2. We will investigate the issue and determine its severity.
-3. A fix will be developed and deployed.
-4. The vulnerability will be disclosed responsibly.
+- A clear description of the vulnerability.
+- Steps to reproduce the issue (including Magento version, PHP version, and any relevant configuration).
+- Impact assessment (what an attacker could achieve).
+- Any suggested mitigation or fix, if known.
 
-## Scope
+### Response timeline
 
-- **Covered:** Source code of the HK2 Core Module.
-- **Not Covered:** Third-party extensions, Magento core bugs, server misconfigurations.
+- **Acknowledgement** — We will acknowledge receipt of your report within 3 business days.
+- **Initial assessment** — We will assess the vulnerability and determine its severity within 7 business days.
+- **Remediation** — A fix will be developed and tested. The timeline depends on severity:
+  - Critical/high severity: patch release within 14 days.
+  - Medium/low severity: patch release within 30 days.
+- **Disclosure** — Once a fix is released, we will publish a security advisory and credit the reporter (if desired).
 
-## Security Best Practices for Users
+### Responsible disclosure
 
-- Secure your `env.php`.
-- Ensure appropriate file permissions.
-- Use secure passwords.
-- Keep Magento and extensions updated.
+We ask that you:
 
-## Contact Information
+1. Allow us reasonable time to investigate and fix the issue before making any information public.
+2. Make every effort to avoid exploiting the vulnerability or causing harm.
+3. Do not access or modify user data without explicit permission.
 
-| Purpose | Contact |
-| :--- | :--- |
-| Security Reports | `support@basantmandal.in` |
-| General Support | `support@basantmandal.in` |
+We are committed to working with security researchers and the community to keep our software safe.
 
-## Acknowledgment
+## PGP Key Information
 
-Thank you for helping keep this project safe and secure!
-
----
-
-<div align="center">
-  <b>Basant Mandal</b><br>
-  <a href="https://www.basantmandal.in/"><img src="https://img.shields.io/badge/Website-000?style=flat-square&logo=ko-fi&logoColor=white" alt="Website"></a>
-  <a href="https://www.linkedin.com/in/basantmandal/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:support@basantmandal.in"><img src="https://img.shields.io/badge/Email-support%40basantmandal.in-blue?style=flat-square&logo=gmail" alt="Email"></a>
-  
-  ---
-</div>
+Security reports can be submitted via email without encryption. If you need to communicate sensitive information, please request a PGP key by emailing support@basantmandal.in, and we will provide our public key for encrypted correspondence.
