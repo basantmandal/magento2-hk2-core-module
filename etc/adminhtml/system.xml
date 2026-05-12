@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <tab id="hk2_options_tab" translate="label" sortOrder="3000">
-            <label>HK2</label>
+            <label><![CDATA[HK2]]></label>
         </tab>
     </system>
 </config>
