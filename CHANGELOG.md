@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/basantmandal/magento2-hk2-core-module/compare/1.0.1...1.0.2) (2026-05-12)
+
+### 🐛 Bug Fixes
+
+* wrap HK2 label in CDATA section for proper XML parsing ([00cc946](https://github.com/basantmandal/magento2-hk2-core-module/commit/00cc9461ec044071e828c6f653adcccf83f97946))
+
 ## [1.0.1](https://github.com/basantmandal/magento2-hk2-core-module/compare/v1.0.0...1.0.1) (2026-05-11)
 
 ### 🐛 Bug Fixes
