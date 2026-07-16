@@ -1,0 +1,1 @@
+# magento2-hk2-core-module
