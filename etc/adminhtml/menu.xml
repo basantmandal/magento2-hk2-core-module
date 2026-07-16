@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="HK2::root"
+            title="HK2"
+            module="HK2_Core"
+            sortOrder="85"
+            parent="Magento_Backend::system"
+            resource="HK2_Core::root" />
+    </menu>
+</config>

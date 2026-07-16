@@ -1,0 +1,32 @@
+<?php
+
+/** @var \Magento\Framework\Escaper $escaper */
+
+?>
+
+<div class="hk2-module-header">
+    <div style="display:flex;gap:14px;align-items:center">
+        <img src="<?= $escaper->escapeUrl($block->getLogoUrl()) ?>"
+             alt="<?= $escaper->escapeHtmlAttr(__('HK2 Logo')) ?>"
+             style="height:43px">
+
+        <div>
+            <strong><?= $escaper->escapeHtml(__('HK2 Extensions Suite for Magento')) ?></strong>
+            <div style="font-size:11px;color:#666">
+                <?= $escaper->escapeHtml(__('Lightweight, Magento-friendly free and open-source modules.')) ?>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top:11px;text-align:center">
+        <a href="<?= $escaper->escapeUrl($block->getWebsiteUrl()) ?>"
+           target="_blank"><?= $escaper->escapeHtml(__('Website')) ?></a> |
+        <a href="<?= $escaper->escapeUrl($block->getLinkedInUrl()) ?>"
+           target="_blank"><?= $escaper->escapeHtml(__('LinkedIn')) ?></a> |
+        <a href="<?= $escaper->escapeUrl($block->getSupportUrl()) ?>"
+           target="_blank"><?= $escaper->escapeHtml(__('Support')) ?></a> |
+        <a href="<?= $escaper->escapeUrl($block->getDonateUrl()) ?>"
+           style="color:#c0392b;font-weight:600"
+           target="_blank"><?= $escaper->escapeHtml(__('❤️ Donate')) ?></a>
+    </div>
+</div>

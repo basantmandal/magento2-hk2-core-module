@@ -1,0 +1,56 @@
+{
+  "name": "hk2/core",
+  "description": "HK2 Core module - The foundational base module for all Magento 2 HK2 extensions.",
+  "type": "magento2-module",
+  "license": "OSL-3.0",
+  "prefer-stable": true,
+  "require": {
+    "magento/framework": "^103.0.0",
+    "php": "^8.1 || ^8.2 || ^8.3 || ^8.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "HK2\\Core\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Basant Mandal",
+      "email": "support@basantmandal.in",
+      "homepage": "https://www.basantmandal.in"
+    }
+  ],
+  "support": {
+    "email": "support@basantmandal.in",
+    "homepage": "https://www.basantmandal.in"
+  },
+  "keywords": [
+    "basant",
+    "basantmandal",
+    "core",
+    "hk2",
+    "magento-module",
+    "magento2"
+  ],
+  "archive": {
+    "exclude": [
+      "./ai",
+      "/.github",
+      "/.gitignore",
+      "/.releaserc.json",
+      "/build",
+      "/composer.lock",
+      "/node_modules",
+      "/package-lock.json",
+      "/package.json",
+      "/phpcs.xml",
+      "/tests",
+      "AGENT.md",
+      "CLAUDE.md",
+      "GEMENI.md"
+    ]
+  }
+}

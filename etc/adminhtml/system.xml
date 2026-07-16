@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="hk2_options_tab" translate="label" sortOrder="3000">
+            <label><![CDATA[HK2]]></label>
+        </tab>
+    </system>
+</config>
